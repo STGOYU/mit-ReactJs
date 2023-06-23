@@ -1,0 +1,43 @@
+$color1: #77A308;
+.product-card{
+    border: 1px solid #cecece;
+    border-radius: 2rem;
+    text-align: center;
+    position: relative;
+    padding-bottom: 1rem;
+    width: 30%;
+    
+    img{
+        border-radius: 2rem 2rem 0 0 ;        
+        width: 100%;
+        height: auto;
+        }
+        .discount{
+                position: absolute;
+                left: 2rem;
+                top: 2rem;
+                display: inline-block;
+                padding: 0.5rem 1rem;
+                background-color: greenyellow;
+                border-radius: 1rem;             
+                color: white;
+                }
+        .stars{
+        color: $color1;
+        }
+
+        .prices{
+            color: $color1;
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            span{
+            .discounted-price{
+                        text-decoration: line-through;
+                        }
+            .standart-price{
+                            font-weight: bold;
+                         }
+            }
+        }
+}

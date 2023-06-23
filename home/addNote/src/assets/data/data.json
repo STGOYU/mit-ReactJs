@@ -1,0 +1,59 @@
+[
+  {
+      "id": "1",
+      "title": "Samsung Galaxy S20 FE 128 GB Snapdragon",
+      "image":
+      "GalaxyS201.jpeg",
+      "price": 499.50,
+      "discount": 0,
+      "rate":2
+  },
+  {
+      "id": "2",
+      "title": "Samsung Galaxy A32 128 GB",
+      "image":
+      "GalaxyA32.jpeg",
+      "price": 349.99,
+      "discount": 10,
+      "rate":3
+  },
+  {
+      "id": "3",
+      "title": "Samsung Galaxy A54 128 GB 8 GB Ram",
+      "image":
+      "GalaxyA54.jpeg",
+      "price": 529.99,
+      "discount": 20,
+      "rate":3
+
+  },
+  {
+      "id": "4",
+      "title": "Samsung Galaxy A23 128 GB 4 GB Ram",
+      "image":
+      "GalaxyA23.jpeg",
+      "price": 265.50,
+      "discount": 33,
+      "rate":4
+  },
+  {
+      "id": "5",
+      "title": "Samsung Galaxy A23 128 GB",
+      "image":
+      "GalaxyA14.jpeg",
+      "price": 235.50,
+      "discount": 40,
+      "rate":5
+  },
+  {
+      "id": "6",
+      "title": "Samsung Galaxy A14 64 GB 4 GB Ram",
+      "image":
+      "GalaxyA13.jpeg",
+      "price": 225.99,
+      "discount": 15,
+      "rate":5
+
+  }
+
+]

@@ -1,0 +1,42 @@
+[
+	{
+		"id": 1,
+		"title":"Men's Shirt",
+		"image":"img-1.jpg",
+		"price":65.4,
+		"discount":0,
+		"rate":1
+	},
+	{
+		"id": 2,
+		"title":"Women's Shirt",
+		"image":"img-2.jpg",
+		"price":75.8,
+		"discount":10,
+		"rate":3
+	},
+	{
+		"id": 3,
+		"title":"Men's Jacket",
+		"image":"img-3.jpg",
+		"price":105.2,
+		"discount":20,
+		"rate":5
+	},
+	{
+		"id": 4,
+		"title":"Women's Blouse",
+		"image":"img-4.jpg",
+		"price":35.4,
+		"discount":0,
+		"rate":1
+	},
+	{
+		"id": 5,
+		"title":"Men's Coats",
+		"image":"img-5.jpg",
+		"price":62.4,
+		"discount":0,
+		"rate":2
+	}
+]

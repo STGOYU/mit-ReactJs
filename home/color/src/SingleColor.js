@@ -12,7 +12,7 @@ const SingleColor = ({rgb,weight,index,hexColor}) => {
     const time = setTimeout(()=>{
       setAlert(false);
     },3000)
-    return clearTimeout(time);
+ //   return clearTimeout(time);
   },[alert]);
 
   return (

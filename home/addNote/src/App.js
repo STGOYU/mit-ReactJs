@@ -1,12 +1,12 @@
 import React from "react";
 //import AddNote from "./components/create-note/add-note/add-note";
-import Birthday from "./components/create-note/birthday";
+import NewNote from "./create-note/newNote";
 
 function App() {
   return (
     <main>
       {/* <ProductList /> */}
-      <Birthday />
+      <NewNote />
     </main>
   );
 }

@@ -2,36 +2,34 @@ import React from "react";
 import {
   Button,
   Card,
+  Container,
   Form,
   // Row,
 } from "react-bootstrap";
 import axios from "axios";
 import * as Yup from "yup";
 import { useFormik } from "formik";
+import { VscEmptyWindow} from "react-icons/vsc";
 
 const NewNote = () => {
   const initialValues = {
-    id: "",
-    firstName: "",
-    textArea: "",
+    textarea:""
+   
   };
   const validationSchema = Yup.object({
-    id: Yup.string()
-      .min(1, "id en az 1 karakter olmalidir!")
-      .required("id yi bos birakamazsiniz!"),
-    title: Yup.string()
-      .min(6, "title en az 5 karakter olmalidir!")
-      .required("title i bos birakamazsiniz!"),
+    textarea: Yup.string()
+      .min(1, "textarea en az 1 karakter olmalidir!")
+      .required("textarea i bos birakamazsiniz!"),
+   
   });
   const onSubmit = async (values) => {
     const dto = {
-      id: values.id,
-      title: values.title,
+      textarea:values.textarea
     };
 
     try {
-      const resp = await axios.put(
-        `https://648a1ac55fa58521cab0d1de.mockapi.io/api/note/`,
+      const resp = await axios.post(
+        "https://648df0f32de8d0ea11e868b3.mockapi.io/note/",
         dto
       );
       console.log(resp);
@@ -43,50 +41,38 @@ const NewNote = () => {
   const formik = useFormik({
     initialValues: initialValues,
     validationSchema: validationSchema,
-    onSubmit: onSubmit,
+    onSubmit: onSubmit
   });
   return (
-    <Card style={{ width: "18rem", height: "400px", marginBottom: "3rem" }}>
+    <Container>
+    <Card style={{ width: "18rem", height: "250px", marginBottom: "3rem", padding:"0", display:"inline-block"}}>
       <Card.Body>
         <Form noValidate onSubmit={formik.handleSubmit} className="gap-2">
-          <Form.Group className="mb-3">
-            <Form.Label>ID</Form.Label>
+        <Form.Group className="mb-3" controlId="ControlInput">
+            <Form.Label>Notes</Form.Label>
             <Form.Control
-              type="number"
-              name="id"
-              placeholder="Lutfen id giriniz..."
-              {...formik.getFieldProps("id")}
-            />
-          </Form.Group>
-          <Form.Group className="mb-3" controlId="ControlInput">
-            <Form.Label>Title</Form.Label>
-            <Form.Control
-              type="text"
-              name="title"
-              placeholder="what's your title"
-              {...formik.getFieldProps("title")}
+              as="textarea"
+              name="textarea"
+              placeholder="what's your text ?"
+              value={formik.values.textarea}
               onChange={formik.handleChange}
               onBlur={formik.handleBlur}
-              isValid={formik.touched.title && !formik.errors.title}
-              isInvalid={formik.touched.title && formik.errors.title}
+              isValid={formik.touched.textarea && !formik.errors.textarea}
+              isInvalid={formik.touched.textarea && formik.errors.textarea}
             />
             <Form.Control.Feedback type="invalid">
-              {formik.errors.title}
+              {formik.errors.textarea}
             </Form.Control.Feedback>
           </Form.Group>
 
-          {/* <Row>
-          {
-            //                 note.map((person) => (<Person key={person.id} {...person} addNote={addNote} />))
-          }
-        </Row> */}
-
-          <Button type="submit" variant="primary">
-            Create Note
+          <Button type="submit" variant="primary" style={{width:"5rem", height:"80px", marginTop:"2rem",alignItems:"center"}}>
+          <VscEmptyWindow/>
           </Button>
+          
         </Form>
       </Card.Body>
     </Card>
+    </Container>
   );
 };
 export default NewNote;

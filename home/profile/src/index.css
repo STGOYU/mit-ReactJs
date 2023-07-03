@@ -143,13 +143,10 @@ main {
   min-height: 100vh;
   display: grid;
   place-items: center;
-  display: flex;
-  flex-wrap: wrap;
 }
 .title {
   text-align: center;
   margin-bottom: 4rem;
-
 }
 .underline {
   height: 0.25rem;
@@ -161,7 +158,6 @@ main {
 .container {
   width: 80vw;
   max-width: var(--fixed-width);
-  
 }
 .review {
   background: var(--clr-white);
@@ -169,11 +165,7 @@ main {
   border-radius: var(--radius);
   box-shadow: var(--light-shadow);
   transition: var(--transition);
-  flex-grow: 1;
-  flex-basis: 300px;
   text-align: center;
-  justify-content: center;
-
 }
 .review:hover {
   box-shadow: var(--dark-shadow);
@@ -253,7 +245,6 @@ main {
   transition: var(--transition);
   border-color: transparent;
   cursor: pointer;
-  
 }
 .random-btn:hover {
   background: var(--clr-primary-5);

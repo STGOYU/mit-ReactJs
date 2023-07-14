@@ -1,27 +1,24 @@
-import React, { useState } from 'react'
+import React from "react";
 
-const Categories = (props) => {
-  const [products, setProducts] = useState([]);
-  
-  const filters = (category) => {
-    if(category === 'all'){
-      setProducts();
-      return;
-    }
-    const news = props.filter((item) => item.category === category);
-    setProducts(news);
-  };
+const Categories = ({categories,filterItems}) => {
 
   return (
-    <div className='btn-container'>
-       <button className="filter-btn" onClick={() => filters ('all')}>
-          All
-       </button>
-       <button className="filter-btn" onClick={() => filters ('breakfast')}>
-          Breakfast
-       </button>
-    </div>
-  )
-}
+    <section>
+      <div className="btn-container">
+        {categories.map((category, index) => {
+          return (
+            <button type="button" 
+            className="filter-btn" 
+            key={index} 
+            onClick={() => filterItems(category)}
+            >
+              {category}
+            </button>
+          )
+        })}
+      </div>
+    </section>
+  );
+};
 
-export default Categories
+export default Categories;
